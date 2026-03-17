@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dope Tracks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon-1.jpg">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+
+<header class="navbar">
+  <div class="logo">dopeTracks</div>
+
+  <input type="checkbox" id="menu-toggle" hidden>
+  
+<label for="menu-toggle" class="hamburger">&#9776;</label>
+
+
+<nav class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#artists">Artists</a>
+  <a href="#all-tracks">Tracks</a>
+  <a href="#artist-tracks">Playlists</a>
+  
+</nav>
+    
+
+
+  </nav>
+  
+
+</header>
+
+
+  <main>
+   
+    <section class="hero" id="home">
+  <h1>DOPE TRACKS</h1>
+  <p class="tagline">Sound that hits different.</p>
+  
+  <a href="#all-tracks" class="btn">Explore Tracks</a>
+</section>
+
+<section id="about">
+  <div class="about-content">
+    <h2>About <span>DopeTracks</span></h2>
+    <p>
+      DopeTracks is a simple web music project made with love for music lovers.  
+      Built by a web designing student (that’s me 👋), this site features some of the best Indian music artists  
+      and curated playlists to vibe to.
+    </p>
+    <p>
+      It’s not a professional product, but a fun and passionate experiment to learn and  
+      create something cool. Enjoy the tunes, and thanks for stopping by!
+    </p>
+  </div>
+</section>
+    
+    <section class="artists" id="artists">
+      <h2>Featured Artists</h2>
+      <div class="artist-cards">
+
+        <a href="#yuvan-playlist" class="card-link">
+          <div class="card">
+            <img src="ani3yuvan1.jpg" alt="Yuvan">
+            <h3>Yuvan</h3>
+            <p>The King</p>
+          </div>
+        </a>
+
+        <a href="#harris-playlist" class="card-link">
+          <div class="card">
+            <img src="harris1.jpg" alt="Harris">
+            <h3>Harris</h3>
+            <p>Maams</p>
+          </div>
+        </a>
+
+        <a href="#arr-playlist" class="card-link">
+          <div class="card">
+            <img src="arr1.jpg" alt="ARR">
+            <h3>ARR</h3>
+            <p>Isaipuyal</p>
+          </div>
+        </a>
+
+        <a href="#raaja-playlist" class="card-link">
+          <div class="card">
+            <img src="raaja2.jpg" alt="Raaja">
+            <h3>Ilaiyaraaja</h3>
+            <p>The God</p>
+          </div>
+        </a>
+
+        <a href="#anirudh-playlist" class="card-link">
+          <div class="card">
+            <img src="ani2.jpg" alt="Anirudh">
+            <h3>Anirudh</h3>
+            <p>The Rockstar</p>
+          </div>
+        </a>
+
+        <a href="#gvp-playlist" class="card-link">
+          <div class="card">
+            <img src="gvp.jpg" alt="Anirudh">
+            <h3>GV Prakash</h3>
+            <p>Asuran</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+
+<section id="all-tracks"><div class="tracks-section">
+    <h2>All Tracks</h2>
+
+<div class="tracks-container">
+  <div class="track" data-song="songs/Yakkai-Thiri.mp3">Yaakkai Thiri</div>
+  <div class="track" data-song="songs/Manjal-Veyil.mp3">Manjal Veyil</div>
+  <div class="track" data-song="songs/Loosu-Penne.mp3">Loosu Pennae</div>
+  <div class="track" data-song="songs/Mazhai-Kuruvi.mp3">Mazhai Kuruvi</div>
+  <div class="track" data-song="songs/Raja Raja Chozhan Naan.mp3">Raja Raja Chozhan</div>
+  <div class="track" data-song="songs/Akkam-Pakkam.mp3">Akkam Pakkam</div>
+  <div class="track" data-song="songs/Hosanna.mp3">Hosanna</div>
+  <div class="track" data-song="songs/Megham-Karukatha.mp3">Megham Karukatha</div>
+  <div class="track" data-song="songs/Munbe Vaa.mp3">Munbe Vaa</div>
+  <div class="track" data-song="songs/Eeramaana Rojave.mp3">Eeramana Rojave</div>
+  <div class="track" data-song="songs/Kadhal-Aasai.mp3">Kadhal Aasai</div>
+  <div class="track" data-song="songs/Lolita.mp3">Lolita</div>
+  <div class="track" data-song="songs/Urugudhe-Maragudhe.mp3">Urugudhe Marugudhe</div>
+  <div class="track" data-song="songs/Merke-Merke.mp3">Merke Merke</div>
+  <div class="track" data-song="songs/Monica.mp3">Monica</div>
+  <div class="track" data-song="songs/Unnaale-Unnaale.mp3">Unnale Unnale</div>
+  <div class="track" data-song="songs/Minnalgal Koothadum.mp3">Minnalgal Koothadum</div>
+  <div class="track" data-song="songs/Po Indru Neeyaga.mp3">Po Indru Neeyaga</div>
+  <div class="track" data-song="songs/Oru-Naalaikkul.mp3">Oru Naalaikul</div>
+  <div class="track" data-song="songs/en-Iniya.mp3">En Iniya Pon Nilave</div>
+  <div class="track" data-song="songs/Quit-Pannuda.mp3">Quit Pannuda</div>
+  <div class="track" data-song="songs/Tere Bina.mp3">Tere Bina</div>
+  <div class="track" data-song="songs/Pookal Pookum.mp3">Pookal Pookum</div>
+  <div class="track" data-song="songs/Ennamo Yeadho.mp3">Ennamo Yaedho</div>
+  <div class="track" data-song="songs/Velicha-Poove.mp3">Velicha Poove</div>
+  <div class="track" data-song="songs/Pesa Koodaathu.mp3">Pesa Koodathu</div>
+  <div class="track" data-song="songs/Valaiyosai.mp3">Valaiyosai Kalakala</div>
+  <div class="track" data-song="songs/Kaatrukulle.mp3">Kaatrukulle</div>
+  <div class="track" data-song="songs/Pirai-Thedum.mp3">Pirai Thedum</div>
+  <div class="track" data-song="songs/Oru-Maalai.mp3">Oru Maalai</div>
+  
+</div>
+</div>
+  </section>
+</section>
+
+
+
+
+<section id="artist-tracks">
+  <h2 class="section-title">Playlists</h2>
+  <div class="artist-tracks">
+<section id="yuvan-playlist" class="tracklist-section">
+  <h2>Yuvan’s Tracks</h2>
+  <ul>
+    <li class="track" data-song="songs/Oru-Naalaikkul.mp3">Oru Naalaikul</li>
+    <li class="track" data-song="songs/Loosu-Penne.mp3">Loosu Pennae</li>
+    <li class="track" data-song="songs/Merke-Merke.mp3">Merke Merke</li>
+    <li class="track" data-song="songs/Kaatrukulle.mp3">Kaatrukulle</li>
+    <li class="track" data-song="songs/Kadhal-Aasai.mp3">Kadhal Aasai</li>
+  </ul>
+</section>
+
+<section id="harris-playlist" class="tracklist-section">
+  <h2>Harris’s Tracks</h2>
+  <ul>
+    <li class="track" data-song="songs/Manjal-Veyil.mp3">Manjal Veyil</li>
+    <li class="track" data-song="songs/Unnaale-Unnaale.mp3">Unnale Unnale</li>
+    <li class="track" data-song="songs/Ennamo Yeadho.mp3">Ennamo Yaedho</li>
+    <li class="track" data-song="songs/Oru-Maalai.mp3">Oru Maalai</li>
+    <li class="track" data-song="songs/Lolita.mp3">Lolita</li>
+  </ul>
+</section>
+
+<section id="arr-playlist" class="tracklist-section">
+  <h2>ARR’s Tracks</h2>
+  <ul>
+    <li class="track" data-song="songs/Yakkai-Thiri.mp3">Yaakkai Thiri</li>
+    <li class="track" data-song="songs/Tere Bina.mp3">Tere Bina</li>
+    <li class="track" data-song="songs/Hosanna.mp3">Hosanna</li>
+    <li class="track" data-song="songs/Munbe Vaa.mp3">Munbe Vaa</li>
+    <li class="track"data-song="songs/Mazhai-Kuruvi.mp3">Mazhai Kuruvi</li>
+  </ul>
+</section>
+
+<section id="raaja-playlist" class="tracklist-section">
+  <h2>Raaja’s Tracks</h2>
+  <ul>
+    <li class="track" data-song="songs/Valaiyosai.mp3">Valaiyosai Kalakala</li>
+    <li class="track" data-song="songs/Pesa Koodaathu.mp3">Pesa Koodathu</li>
+    <li class="track" data-song="songs/Eeramaana Rojave.mp3">Eeramaana Rojave</li>
+    <li class="track" data-song="songs/en-Iniya.mp3">En Iniya Pon Nilave</li>
+    <li class="track" data-song="songs/Raja Raja Chozhan Naan.mp3">Raja Raja Chozhan</li>
+  </ul>
+</section>
+
+<section id="anirudh-playlist" class="tracklist-section">
+  <h2>Anirudh’s Tracks</h2>
+  <ul>
+    <li class="track" data-src="songs/Quit-Pannuda.mp3">Quit Pannuda</li>
+    <li class="track" data-src="songs/Velicha-Poove.mp3">Megham Karukkatha</li>
+    <li class="track" data-src="songs/Velicha-Poove.mp3">Velicha Poove</li>
+    <li class="track" data-src="songs/Po Indru Neeyaga.mp3">Po Indru Neeyaga</li>
+    <li class="track" data-src="songs/Monica.mp3">Monica</li>
+  </ul>
+</section>
+<section id="gvp-playlist" class="tracklist-section">
+  <h2>GVP’s Tracks</h2>
+  <ul>
+    <li class="track" data-song="songs/Pookal Pookum.mp3">Pookal Pookum</li>
+    <li class="track" data-song="songs/Akkam-Pakkam.mp3">Akkam Pakkam</li>
+    <li class="track" data-song="songs/Pirai-Thedum.mp3">Pirai Thedum</li>
+    <li class="track" data-song="songs/Urugudhe-Maragudhe.mp3">Urugudhe Marugudhe</li>
+    <li class="track" data-song="songs/Minnalgal Koothadum.mp3">Minnalgal Koothadum</li>
+  </ul>
+</section>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<footer>
+  Made with <span>💜</span> by <span>ris.</span> | &copy; 2025
+</footer>
+
+</main>
+
+
+<button id="backToTop" title="Go to top">↑</button>
+
+<script>
+const audioPlayer = document.getElementById('audioPlayer');
+const tracks = document.querySelectorAll('.track, li[data-song]');
+
+let currentSong = null;
+let currentTrackElement = null;
+
+tracks.forEach(track => {
+  track.addEventListener('click', () => {
+    const song = track.getAttribute('data-song');
+
+    if (currentSong === song) {
+      
+      if (!audioPlayer.paused) {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+        
+      } else {
+        audioPlayer.play();
+      }
+    } else {
+     
+      if (currentTrackElement) {
+        currentTrackElement.classList.remove('active');
+      }
+      
+      audioPlayer.src = song;
+      audioPlayer.play();
+      currentSong = song;
+      currentTrackElement = track;
+      track.classList.add('active'); 
+    }
+  });
+});
+
+
+
+
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+</body>
+</html>

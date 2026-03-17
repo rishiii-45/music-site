@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+}
+
+html { scroll-behavior: smooth; }
+
+
+section { scroll-margin-top: 90px; } 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121212;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #a480d9;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 27px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #7636d5;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1c1c1c;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+.hero {
+  background-color: #0a0a0a;
+  padding: 7rem 2rem 5rem;
+  border-radius: 0px;
+  margin-top: 0px;
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 180px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #9636fd;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #9f00ff, #00f7e7);
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 20px rgba(178, 102, 255, 0.4);
+  cursor: pointer;
+}
+
+
+.artists {
+  background: #0e0e0e;
+  color: #fff;
+  padding: 50px 40px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.artists h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #b36eff;
+}
+
+/* ---------- ARTIST GRID (use CSS Grid for predictable rows) ---------- */
+.artist-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+  gap: 80px;
+  padding: 0 3rem;
+  justify-items: center;   /* center each card in its grid cell */
+  align-items: start;
+  max-width: 1200px;       /* optional - keep grid from getting too wide */
+  margin: 0 auto;          /* center the whole grid */
+}
+
+/* card link sizing — remove hard width on anchor */
+.artist-cards a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;             /* take full grid cell width */
+  max-width: 360px;        /* cap card size if you want */
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(178, 102, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  min-height: 460px;  /* <-- TALL vertical cards */
+}
+
+
+.card img {
+  width: 100%;
+  height: 330px;     /* <-- Taller image */
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+
+/* card text */
+.card h3 { font-size: 1.3rem; color: #d8b4ff; margin: 10px 0 6px; }
+.card p  { font-size: 1rem; color: #aaa; margin: 0; }
+
+/* hover */
+.card:hover { transform: translateY(-6px); box-shadow: 0 0 30px rgba(178,102,255,0.45); }
+
+/* ---------- Responsive rules ---------- */
+/* tablets: 2 columns */
+@media (max-width: 992px) {
+  .artist-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* phones: 1 column */
+@media (max-width: 600px) {
+  .artist-cards {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 18px;
+  }
+
+  .card { min-height: auto; } /* allow taller flow on very narrow screens */
+  .card img { height: 220px; } /* bigger image for stacked layout if you want */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .artist-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#playlist-section {
+  background-color: #111;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#playlist-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#playlist-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+#playlist-section li {
+  margin: 20px 0;
+  color: #ccc;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.tracks-section {
+  background: #1b1b1b; /* same dark background */
+  padding: 40px 20px;
+  
+}
+
+.tracks-section h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 37px;
+  color: #b36eff; /* purple accent like rest of site */
+  text-align: center;
+}
+
+.tracks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-evenly;
+  column-gap: 50px;
+  row-gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.track {
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  color: #e5e5e5;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.track:hover {
+  background: #7636d5; /* purple hover */
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.4);
+  cursor: pointer;
+  
+}
+
+/* Mobile view: 1 per row */
+@media (max-width: 768px) {
+  .tracks-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Artist Tracks Section Wrapper */
+.tracklist-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.artist-tracks h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 37px;
+  color: #b36eff; /* purple accent like rest of site */
+  text-align: center;
+}
+
+/* Full section background */
+.artist-tracks {
+  background: #0d0d0d; /* or same gradient as All Tracks */
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row */
+  gap: 50px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .artist-tracks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .artist-tracks {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-title {
+  background: #0d0d0d;
+  font-size: 2.5rem;
+  padding-top: 25px;
+  text-align: center;
+  color: #b36eff;
+}
+
+#playlist-section li {
+  cursor: pointer;
+  padding: 20px 0;
+  transition: color 0.3s;
+}
+
+#playlist-section li:hover {
+  color: #b36eff; /* highlight on hover */
+}
+
+
+.track {
+  padding: 8px 12px;
+  cursor: pointer;
+  
+}
+
+.track.active {
+  background-color: #7636d5;
+  font-weight: bold;
+}
+
+li.track {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+li.track.active {
+  background: #7636d5;
+  font-weight: bold;
+}
+
+.track {
+  padding: 8px 20px;
+  cursor: pointer;
+  
+  position: relative;
+}
+
+
+.track.active {
+  background: #7636d5;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.tracklist-section {
+  background: #1a1a1a; 
+  padding: 20px;
+  gap: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+.tracklist-section h2 {
+  color: #c084fc;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+
+.tracklist-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tracklist-section ul li {
+  background: #0f0f0f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.tracklist-section ul li:hover {
+  background: #7636d5;
+  cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+  .tracklist-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.site-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  border-top: 1px solid #333;
+  margin-top: 60px;
+  letter-spacing: 0.3px;
+}
+
+.site-footer strong {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+
+#playlist-section {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+#playlist-section ul {
+  margin-bottom: 0;
+}
+
+#about {
+  background-color: #1a1a1a;
+  color: #eee;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  font-size: 2.05rem;
+  margin-bottom: 25px;
+  color: #c17dfd;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+
+footer {
+  background-color: #121212;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+footer span {
+  color: #b388eb; 
+  font-weight: bold;
+}
+#backToTop {
+  display: none; 
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #6c63ff;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #000000;
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 470;
+}
+
+.hamburger {
+  display: none; 
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    width: 180px;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; 
+  }
+}
+
+
